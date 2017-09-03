@@ -15,7 +15,6 @@
     background: transparent url(http://p3.music.126.net/FnXcarH5LTctB7DdHW3Tyw==/17831879579569314.jpg) no-repeat center;
     background-size: cover;
 }
-
 .disc-container{
     position:relative;
 }
@@ -30,24 +29,80 @@
     align-items: center;
     margin-top:18vw;
 }
+.disc-container .disc .icon-wrapper .icon {
+    fill: white;
+    background: rgba(0,0,0,0.5);
+    overflow: hidden;
+    width: 20vw;
+    height: 20vw;
+    border-radius: 50%;
+ }
+.disc-container .disc .icon-wrapper{
+    position: absolute;
+    z-index: 1;
+}
+.disc-container .disc.playing .icon-wrapper .icon-play{
+    display: none;
+}
+.disc-container .disc.playing .icon-wrapper .icon-pause{
+    display: block;
+}
+.disc-container .disc .icon-wrapper .icon-play{
+    display: block;
+}
+.disc-container .disc .icon-wrapper .icon-pause{
+    display: none;
+}
 .disc-container .ring{
     width:72vw;
 }
 .disc-container .light{
     width:72vw;
     position: absolute;
-    animation: circle 6s infinite linear;
+    animation: circle 24s infinite linear;
 }
 .disc-container .cover{
     width:45vw;
     position: absolute;
     border-radius: 50%;
-    animation: circle 6s infinite linear;
+    animation: circle 24s infinite linear;
+}
+.song-description .lyric{
+    height:96px;
+    min-width:50vw;
+    overflow:hidden;
+    font-size:18px;
+    line-height: 32px;
 }
 .song-description{
+    flex-grow: 1;
+    text-align: center ;
+}
+.song-description >h1{
+    font-size:40px;
+}
+.page > .links{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    color: #D43B30;
 
 }
-
-.page > .links{
-
+.page > .links >a{
+    width: 38vw;
+    text-align: center;
+    border: 1px solid #D43B30;
+    border-radius: 4px;
+    margin: 16px;
+    padding: 1vw;
+    text-decoration: none;
+    color: inherit;
+    background: transparent;
+    font-size: 18px;
+    letter-spacing: 4px;
+    text-indent: 4px;
+}
+.page > .links >a.main{
+    background: #D43B30;
+    color: white;
 }
