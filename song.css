@@ -61,11 +61,24 @@
     position: absolute;
     animation: circle 24s infinite linear;
 }
-.disc-container .cover{
+.disc-container .disc .light{
+    width:72vw;
+    position: absolute;
+    animation: circle 24s infinite linear;
+    animation-play-state: paused;
+}
+.disc-container .disc.playing .light{
+    animation-play-state: running;
+}
+.disc-container .disc .cover{
     width:45vw;
     position: absolute;
     border-radius: 50%;
     animation: circle 24s infinite linear;
+    animation-play-state: paused;
+}
+.disc-container .disc.playing .cover{
+    animation-play-state: running;
 }
 .song-description .lyric{
     height:96px;
