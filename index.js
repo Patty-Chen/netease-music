@@ -69,3 +69,17 @@ $('.search-input>input').on('input',(e)=>{
     },500);
 
 })
+
+let hotSearchList = $('<ol></ol>')
+hotkey.forEach((item)=>{
+    let li = $(`<li>${item}</li>`)
+    hotSearchList.append(li)
+})
+$('.hot-search').append(hotSearchList)
+
+let hotMusicList = $('<ol></ol>')
+data.forEach((item)=>{
+    let li = $(`<li>${item.name}</li>`)
+    hotMusicList.append(li)
+})
+$('.hot-music-container').append(hotMusicList)
