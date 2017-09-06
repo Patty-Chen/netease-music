@@ -80,16 +80,19 @@
 .disc-container .disc.playing .cover{
     animation-play-state: running;
 }
+.song-description .lyric-wrapper{
+    overflow: hidden;
+}
 .song-description .lyric{
-    height:96px;
-    min-width:50vw;
-    overflow:hidden;
-    font-size:18px;
+    height: 96px;
+    min-width: 50vw;
+    font-size: 18px;
     line-height: 32px;
+    transition: transform 0.3s;
 }
 .song-description{
     flex-grow: 1;
-    text-align: center ;
+    text-align: center;
 }
 .song-description >h1{
     font-size:40px;
