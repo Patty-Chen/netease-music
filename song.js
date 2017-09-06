@@ -36,7 +36,7 @@ iconPause.onclick = ()=>{
     element.setAttribute('class', newClass);
     audio.pause();
 }
-
+audio.onended = iconPause.onclick
 let iconPlay = document.querySelector('.icon-play')
 iconPlay.onclick = ()=>{
     let oldClass = element.getAttribute('class')
