@@ -11,7 +11,12 @@ section>h2:first-child{
     padding-left: 2vw;
     margin: 3vw 0;
 }
-
+.tab-content >ol >li{
+    display: none;
+}
+.tab-content >ol >li.active{
+    display: block;
+}
 .topbar{
     background: #d43c33;
     padding:5.5vw 2.5vw;
@@ -152,4 +157,9 @@ nav >ol >li.active >.text-container{
     text-align: center;
     color: #888888;
     margin-bottom: 4vw;
+}
+
+
+.search-input >input{
+    border: 1px solid #d43c33
 }
