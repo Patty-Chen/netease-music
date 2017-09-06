@@ -52,6 +52,8 @@ setInterval(()=>{
     if (secondsNextLine && currentSeconds > secondsNextLine){
         currentLine++;
         $lyric.css('transform',`translateY(-${(currentLine - errorLines - 1) * height}px`)
+        $('.lyric p')[currentLine - errorLines -1].removeAttribute('class')
+        $('.lyric p')[currentLine - errorLines].setAttribute('class','current-line')
         console.log(currentLine, currentSeconds);
     }
     else if (!secondsNextLine){

@@ -8,15 +8,18 @@
         transform: rotate(360deg);
     }
 }
+
 .page{
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background: transparent url(http://p3.music.126.net/FnXcarH5LTctB7DdHW3Tyw==/17831879579569314.jpg) no-repeat center;
+    background: url(http://p3.music.126.net/FnXcarH5LTctB7DdHW3Tyw==/17831879579569314.jpg) no-repeat center;
     background-size: cover;
 }
+
 .disc-container{
     position:relative;
+    background-color: rgba(0,0,0,.4);
 }
 .disc-container .needle{
     position: absolute;
@@ -80,6 +83,17 @@
 .disc-container .disc.playing .cover{
     animation-play-state: running;
 }
+
+.song-description{
+    flex-grow: 1;
+    text-align: center;
+    background-color: rgba(0,0,0,.4);
+    color: hsla(0,0%,100%,.6);
+}
+.song-description h1{
+    color: white;
+    margin: 2vw;
+}
 .song-description .lyric-wrapper{
     overflow: hidden;
 }
@@ -90,9 +104,8 @@
     line-height: 32px;
     transition: transform 0.3s;
 }
-.song-description{
-    flex-grow: 1;
-    text-align: center;
+.song-description .lyric p.current-line{
+    color: white;
 }
 .song-description >h1{
     font-size:40px;
@@ -102,7 +115,7 @@
     justify-content: center;
     align-items: center;
     color: #D43B30;
-
+    background-color: rgba(0,0,0,.4);
 }
 .page > .links >a{
     width: 38vw;
