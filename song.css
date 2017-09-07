@@ -92,7 +92,10 @@
 }
 .song-description h1{
     color: white;
-    margin: 2vw;
+    margin-top: 8vw;
+    margin-bottom: 3vw;
+    font-size: 1.2em;
+    font-weight: normal;
 }
 .song-description .lyric-wrapper{
     overflow: hidden;
@@ -106,9 +109,6 @@
 }
 .song-description .lyric p.current-line{
     color: white;
-}
-.song-description >h1{
-    font-size:40px;
 }
 .page > .links{
     display:flex;

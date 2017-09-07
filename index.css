@@ -101,37 +101,38 @@ nav >ol >li.active >.text-container{
     text-overflow: ellipsis;
 }
 
-.fashion-musics >ol >li{
-    display: flex;
-    justify-content: space-between;
+.fashion-musics >ol >li, .hot-music-container >ol >li, .result >ol >li{
+
     margin: 0 calc(2vw + 4px);
     padding: 1.5vw 0;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-.fashion-musics >ol >li a{
+.fashion-musics >ol >li a, .hot-music-container >ol >li a, .result>ol >li a{
+    display: flex;
+    justify-content: space-between;
     color: inherit;
     text-decoration: none;
 }
-.fashion-musics >ol >li p{
+.fashion-musics >ol >li p, .hot-music-container >ol >li p, .result >ol >li p{
     color: #888888;
 }
-.fashion-musics >ol >li p >.icon-sq{
+.fashion-musics >ol >li p >.icon-sq, .hot-music-container >ol >li p >.icon-sq, .result>ol >li p >.icon-sq{
     fill: #fe672e;
     overflow: hidden;
     width: 6vw;
     height: 4vw;
     vertical-align: middle;
 }
-.fashion-musics >ol >li h3{
+.fashion-musics >ol >li h3, .hot-music-container >ol >li h3, .result >ol >li h3{
     font-weight: normal;
     font-size: 1.3em;
     min-width: 80vw;
 }
-.fashion-musics >ol >li .play{
+.fashion-musics >ol >li .play,.hot-music-container >ol >li .play, .result >ol >li .play{
     display: flex;
     align-items: center;
 }
-.fashion-musics >ol >li .icon-play{
+.fashion-musics >ol >li .icon-play, .hot-music-container >ol >li .icon-play, .result>ol >li .icon-play{
     fill: grey;
     overflow: hidden;
     width: 8vw;
@@ -172,7 +173,6 @@ nav >ol >li.active >.text-container{
 }
 
 .top-text{
-
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -190,6 +190,12 @@ nav >ol >li.active >.text-container{
     font-size: .9em;
     margin-top: 2vw;
     color: hsla(0,0%,100%,.8);
+}
+.hot-music-container ol li{
+    color: rgba(0,0,0,0.8);
+    margin: 0 3vw;
+    padding: 3vw 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
 }
 .search-input{
     display: block;
@@ -245,3 +251,4 @@ nav >ol >li.active >.text-container{
     line-height: 5.5vw;
     border-radius: 4vw;
 }
+

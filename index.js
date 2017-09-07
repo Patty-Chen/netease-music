@@ -1,4 +1,4 @@
-
+let songListTemplate =
 data.forEach((item)=>{
     let li = $(`
         <li>
@@ -11,12 +11,12 @@ data.forEach((item)=>{
                         </svg>演唱者-专辑
                     </p>
                 </div>
+                <div class="play">
+                    <svg class="icon icon-play" aria-hidden="true">
+                        <use xlink:href="#icon-play"></use>
+                    </svg>
+                </div>
             </a>
-            <div class="play">
-                <svg class="icon icon-play" aria-hidden="true">
-                    <use xlink:href="#icon-play"></use>
-                </svg>
-            </div>
         </li>
     `)
     $('.fashion-musics ol').append(li)
@@ -61,7 +61,25 @@ $('.search-input input').on('input',(e)=>{
         if (result.length !== 0){
             let ol = $('<ol></ol>')
             result.forEach((item)=>{
-                let li = $(`<li>${item.name}</li>`)
+                let li = $(`
+                        <li>
+                            <a href="./index.html?id=${item.id}">
+                                <div class="song-info">
+                                    <h3>${item.name}</h3>
+                                    <p>
+                                        <svg class="icon icon-sq" aria-hidden="true">
+                                            <use xlink:href="#icon-SQ"></use>
+                                        </svg>演唱者-专辑
+                                    </p>
+                                </div>
+                                <div class="play">
+                                    <svg class="icon icon-play" aria-hidden="true">
+                                        <use xlink:href="#icon-play"></use>
+                                    </svg>
+                                </div>
+                            </a>
+                        </li>
+                    `)
                 ol.append(li)
             })
             $('.result').empty().append(ol)
@@ -94,7 +112,25 @@ $('.hot-search').on('click','ol>li',(e)=>{
 
 let hotMusicList = $('<ol></ol>')
 data.forEach((item)=>{
-    let li = $(`<li>${item.name}</li>`)
+    let li = $(`
+        <li>
+            <a href="./index.html?id=${item.id}">
+                <div class="song-info">
+                    <h3>${item.name}</h3>
+                    <p>
+                        <svg class="icon icon-sq" aria-hidden="true">
+                            <use xlink:href="#icon-SQ"></use>
+                        </svg>演唱者-专辑
+                    </p>
+                </div>
+                <div class="play">
+                    <svg class="icon icon-play" aria-hidden="true">
+                        <use xlink:href="#icon-play"></use>
+                    </svg>
+                </div>
+            </a>
+        </li>
+    `)
     hotMusicList.append(li)
 })
 $('.hot-music-container').append(hotMusicList)

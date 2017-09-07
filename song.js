@@ -1,6 +1,7 @@
 var id = location.search.match(/\bid=([^&]*)/)[1]
 let lyric = data[id].lyric
 let songUrl = data[id].url
+let name = data[id].name
 
 var lyricArray = lyric.split('\n')
 lyricArray = lyricArray.map((string)=>{
@@ -54,21 +55,23 @@ setInterval(()=>{
         $lyric.css('transform',`translateY(-${(currentLine - errorLines - 1) * height}px`)
         $('.lyric p')[currentLine - errorLines -1].removeAttribute('class')
         $('.lyric p')[currentLine - errorLines].setAttribute('class','current-line')
-        console.log(currentLine, currentSeconds);
+        console.log(currentLine, secondsNextLine);
     }
     else if (!secondsNextLine){
         currentLine++; //避免lyric文件异常造成程序死循环
         errorLines++;
     }
+    console.log(currentSeconds)
 },500)
 
 var getLineTime = (line)=>{
     if (lyricArray[line] && lyricArray[line].time){
         let rawTime = (lyricArray[line].time).match(/(\d+):(\d+\.\d+)/)
         let seconds = parseInt(rawTime[1]*60)+parseFloat(rawTime[2])
-        console.log(seconds)
         return seconds
     }
 }
 
 
+let songNameElem = document.querySelector('.song-description h1')
+songNameElem.innerHTML = name
