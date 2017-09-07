@@ -2,7 +2,7 @@ let songListTemplate =
 data.forEach((item)=>{
     let li = $(`
         <li>
-            <a href="./index.html?id=${item.id}">
+            <a href="./song.html?id=${item.id}">
                 <div class="song-info">
                     <h3>${item.name}</h3>
                     <p>
@@ -63,7 +63,7 @@ $('.search-input input').on('input',(e)=>{
             result.forEach((item)=>{
                 let li = $(`
                         <li>
-                            <a href="./index.html?id=${item.id}">
+                            <a href="./song.html?id=${item.id}">
                                 <div class="song-info">
                                     <h3>${item.name}</h3>
                                     <p>
@@ -114,7 +114,7 @@ let hotMusicList = $('<ol></ol>')
 data.forEach((item)=>{
     let li = $(`
         <li>
-            <a href="./index.html?id=${item.id}">
+            <a href="./song.html?id=${item.id}">
                 <div class="song-info">
                     <h3>${item.name}</h3>
                     <p>
