@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link rel="stylesheet" href="./index.css">
     <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
-    <script src="http://at.alicdn.com/t/font_404422_f0p20im9wykz9f6r.js"></script>
+    <script src="http://at.alicdn.com/t/font_404422_0mgbsp49mzs0dx6r.js"></script>
 </head>
 <body>
     <header class="topbar">
@@ -70,9 +70,24 @@
             </li>
             <li>
                 <section class="search-input">
-                    <input type="text">
+                    <div class="search-wrapper">
+                        <div class="icon-search-wrapper">
+                            <svg class="icon icon-search" aria-hidden="true">
+                                <use xlink:href="#icon-search"></use>
+                            </svg>
+                        </div>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="搜索歌曲 歌手 专辑">
+                        </div>
+                        <div class="close-wrapper">
+                            <svg class="icon icon-search" aria-hidden="true">
+                                <use xlink:href="#icon-close"></use>
+                            </svg>
+                        </div>
+                    </div>
                 </section>
                 <section class="hot-search">
+                    <h3>热门搜索</h3>
                 </section>
                 <section class="result">
                 </section>

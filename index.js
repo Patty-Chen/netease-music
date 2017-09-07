@@ -44,7 +44,7 @@ window.search = function(keyword){
 }
 
 let inputTimer = undefined
-$('.search-input>input').on('input',(e)=>{
+$('.search-input input').on('input',(e)=>{
     let input = $(e.currentTarget)
     let value = input.val().trim()
     if (!value || value === ''){
@@ -64,10 +64,17 @@ $('.search-input>input').on('input',(e)=>{
                 let li = $(`<li>${item.name}</li>`)
                 ol.append(li)
             })
-            $('.result').append(ol)
+            $('.result').empty().append(ol)
+        }
+        else{
+            $('.result').text('未找到对应结果')
         }
     },500);
 
+})
+
+$('.search-input .close-wrapper').on('click',()=>{
+    $('.search-input input').val('')
 })
 
 let hotSearchList = $('<ol></ol>')
@@ -76,6 +83,14 @@ hotkey.forEach((item)=>{
     hotSearchList.append(li)
 })
 $('.hot-search').append(hotSearchList)
+
+$('.hot-search').on('click','ol>li',(e)=>{
+    let li = $(e.currentTarget)
+    let value = li.text().trim()
+    let input = $('.search-input input')
+    input.val(value).trigger('input')
+})
+
 
 let hotMusicList = $('<ol></ol>')
 data.forEach((item)=>{
