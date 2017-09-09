@@ -29,7 +29,7 @@ let createSongList = function(data){
 }
 
 let fashionMusicList = createSongList(data)
-$(.fashion-musics).append(fashionMusicList)
+$('.fashion-musics').append(fashionMusicList)
 
 $('nav').on('click','ol>li',(e)=>{
     let li = $(e.currentTarget).addClass('active')
