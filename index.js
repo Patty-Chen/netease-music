@@ -19,11 +19,17 @@ let createSongListItem = function(item){
         </li>
     `)
 }
-data.forEach((item)=>{
-    let li = createSongListItem(item)
-    $('.fashion-musics ol').append(li)
+let createSongList = function(data){
+    let ol = $('<ol></ol>')
+    data.forEach((item)=>{
+        let li = createSongListItem(item)
+        ol.append(li)
+    })
+    return ol
+}
 
-})
+let fashionMusicList = createSongList(data)
+$(.fashion-musics).append(fashionMusicList)
 
 $('nav').on('click','ol>li',(e)=>{
     let li = $(e.currentTarget).addClass('active')
@@ -61,11 +67,7 @@ $('.search-input input').on('input',(e)=>{
         console.log(value)
         let result = search(value)
         if (result.length !== 0){
-            let ol = $('<ol></ol>')
-            result.forEach((item)=>{
-                let li = createSongListItem(item)
-                ol.append(li)
-            })
+            let ol = createSongList(result)
             $('.result').empty().append(ol)
         }
         else{
@@ -94,9 +96,5 @@ $('.hot-search').on('click','ol>li',(e)=>{
 })
 
 
-let hotMusicList = $('<ol></ol>')
-data.forEach((item)=>{
-    let li = createSongListItem(item)
-    hotMusicList.append(li)
-})
+let hotMusicList = createSongList(data)
 $('.hot-music-container').append(hotMusicList)
