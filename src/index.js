@@ -1,8 +1,42 @@
 import $ from 'jquery'
 import './index.css'
 import {data,hotkey} from './testdata.js'
+import React from 'react';
+import ReactDOM from 'react-dom';
 
-let createSongListItem = function(item){
+
+
+function Songlistitem(props){
+    let songhtmlUrl = `./song.html?id=${props.item.id}`
+    return <li>
+                <a href={songhtmlUrl}>
+                    <div className="song-info">
+                        <h3>{props.item.name}</h3>
+                        <p><svg className="icon icon-sq" aria-hidden="true">
+                            <use xlinkHref="#icon-SQ"></use>
+                        </svg>{props.item.singer}</p>
+                    </div>
+                    <div className="play">
+                        <svg className="icon icon-play" aria-hidden="true">
+                            <use xlinkHref="#icon-play"></use>
+                        </svg>
+                    </div>
+                </a>
+            </li>;
+}
+
+function Songlist(props){
+    const songList = props.data.map((item)=>{
+        return <Songlistitem key={item.id} item={item}/>;
+    })
+    return <ol>{songList}</ol>;
+};
+
+ReactDOM.render(
+    <Songlist data={data} />,
+    document.getElementsByClassName('fashion-musics-container')[0]
+)
+/*let createSongListItem = function(item){
     return $(`
         <li>
             <a href="./song.html?id=${item.id}">
@@ -23,17 +57,7 @@ let createSongListItem = function(item){
         </li>
     `)
 }
-let createSongList = function(data){
-    let ol = $('<ol></ol>')
-    data.forEach((item)=>{
-        let li = createSongListItem(item)
-        ol.append(li)
-    })
-    return ol
-}
 
-let fashionMusicList = createSongList(data)
-$('.fashion-musics').append(fashionMusicList)
 
 $('nav').on('click','ol>li',(e)=>{
     let li = $(e.currentTarget).addClass('active')
@@ -101,4 +125,4 @@ $('.hot-search').on('click','ol>li',(e)=>{
 
 
 let hotMusicList = createSongList(data)
-$('.hot-music-container').append(hotMusicList)
+$('.hot-music-container').append(hotMusicList)*/

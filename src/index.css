@@ -101,29 +101,29 @@ nav >ol >li.active >.text-container{
     text-overflow: ellipsis;
 }
 
-.fashion-musics >ol >li, .hot-music-container >ol >li, .result >ol >li{
+.fashion-musics  ol >li, .hot-music-container >ol >li, .result >ol >li{
 
     margin: 0 calc(2vw + 4px);
     padding: 1.5vw 0;
     border-bottom: 1px solid rgba(0,0,0,0.1);
 }
-.fashion-musics >ol >li a, .hot-music-container >ol >li a, .result>ol >li a{
+.fashion-musics  ol >li a, .hot-music-container >ol >li a, .result>ol >li a{
     display: flex;
     justify-content: space-between;
     color: inherit;
     text-decoration: none;
 }
-.fashion-musics >ol >li p, .hot-music-container >ol >li p, .result >ol >li p{
+.fashion-musics  ol >li p, .hot-music-container >ol >li p, .result >ol >li p{
     color: #888888;
 }
-.fashion-musics >ol >li p >.icon-sq, .hot-music-container >ol >li p >.icon-sq, .result>ol >li p >.icon-sq{
+.fashion-musics  ol >li p >.icon-sq, .hot-music-container >ol >li p >.icon-sq, .result>ol >li p >.icon-sq{
     fill: #fe672e;
     overflow: hidden;
     width: 6vw;
     height: 4vw;
     vertical-align: middle;
 }
-.fashion-musics >ol >li h3, .hot-music-container >ol >li h3, .result >ol >li h3{
+.fashion-musics  ol >li h3, .hot-music-container >ol >li h3, .result >ol >li h3{
     font-weight: normal;
     font-size: 1.3em;
     min-width: 80vw;
@@ -132,7 +132,7 @@ nav >ol >li.active >.text-container{
     display: flex;
     align-items: center;
 }
-.fashion-musics >ol >li .icon-play, .hot-music-container >ol >li .icon-play, .result>ol >li .icon-play{
+.fashion-musics  ol >li .icon-play, .hot-music-container >ol >li .icon-play, .result>ol >li .icon-play{
     fill: grey;
     overflow: hidden;
     width: 8vw;
