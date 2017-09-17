@@ -1,3 +1,7 @@
+import $ from 'jquery'
+import './index.css'
+import {data,hotkey} from './testdata.js'
+
 let createSongListItem = function(item){
     return $(`
         <li>
@@ -7,7 +11,7 @@ let createSongListItem = function(item){
                     <p>
                         <svg class="icon icon-sq" aria-hidden="true">
                             <use xlink:href="#icon-SQ"></use>
-                        </svg>演唱者-专辑
+                        </svg>${item.singer}
                     </p>
                 </div>
                 <div class="play">

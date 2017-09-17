@@ -1,3 +1,7 @@
+import $ from 'jquery'
+import './song.css'
+import {data,hotkey} from './testdata.js'
+
 var id = location.search.match(/\bid=([^&]*)/)[1]
 let lyric = data[id].lyric
 let songUrl = data[id].url
