@@ -4,7 +4,8 @@ import {data,hotkey} from './testdata.js'
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SongList from './songList'
-
+import TabChange from "./tabChange";
+import TabContent from './tabContent';
 
 $('nav').on('click','ol>li',(e)=>{
     let li = $(e.currentTarget).addClass('active')
@@ -67,22 +68,19 @@ $('.search-input input').on('input',(e)=>{
 $('.search-input .close-wrapper').on('click',()=>{
     $('.search-input input').val('')
 })
-
-
 ReactDOM.render(
-    <SongList data={data} />,
-    document.getElementsByClassName('fashion-musics-container')[0]
+    <TabChange />,
+    document.getElementsByTagName('nav')[0]
+)
+ReactDOM.render(
+    <TabContent index='0'/>,
+    document.getElementsByClassName('tab-content')[0]
 )
 
-ReactDOM.render(
-    <SongList data={data} />,
-    document.getElementsByClassName('hot-music-container')[0]
-)
 
-ReactDOM.render(
-    <SongList data={data} />,
-    document.getElementsByClassName('result')[0]
-)
+
+
+
 
 
 

@@ -1,6 +1,6 @@
 *{margin:0;padding:0;box-sizing: border-box}
 *::before,*::after{box-sizing: border-box}
-ol,ul{list-style: none}
+ol,ul,li{list-style: none}
 ::-webkit-input-placeholder { /* WebKit browsers */
     color:    #999;
 }
